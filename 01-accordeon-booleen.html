@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/alpinejs"></script>
     <title>Accordéon avec des booléens</title>
   </head>
   <body>
-    <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section>
+        <dl x-data="{lorem: false}">
+          <dt @click=" lorem = ! lorem"><button>bouton 1</button></dt>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <dd x-show="lorem">Saepe temporibus quasi odit nesciunt expedita culpa repudiandae quas voluptatibus neque? Veritatis saepe minus dolore excepturi aliquid doloribus cumque magnam delectus quod.</dd>
+        </dl>
+      </section>
+      <section>
+        <dl x-data="{lorem: false}">
+          <dt @click=" lorem = ! lorem"><button>bouton 2</button></dt>
+          <p>Neque accusamus autem modi pariatur error voluptate id ut optio hic velit, numquam minus libero?</p>
+          <dd x-show="lorem"> Quae ea aperiam quisquam facilis voluptatibus similique, quaerat nulla distinctio consequatur aliquam illum pariatur omnis.</dd>
+        </dl>
+      </section>
+      <section>
+        <dl x-data="{lorem: false}">
+          <dt @click=" lorem = ! lorem"><button>bouton 3</button></dt>
+          <p>Nemo beatae est officia, rem iusto saepe? Incidunt ratione doloribus ea eveniet culpa deserunt unde ex.</p>
+          <dd x-show="lorem"> Ipsam tenetur beatae aut, facilis inventore adipisci error veritatis, maxime sint fuga rerum nulla?</dd>
+        </dl>
+      </section>
+    </div>
   </body>
 </html>
