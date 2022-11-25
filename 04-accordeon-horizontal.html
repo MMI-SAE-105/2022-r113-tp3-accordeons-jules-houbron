@@ -6,6 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
   </head>
+  <style>
+    
+    /* code mini pour voir l'effet */
+
+    ul#accordeon li {
+      display: inline-block;
+      background-color: #EEE;
+      width: 107px;
+      /* Transition */
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+    }
+
+    ul#accordeon li.actif {
+      width: 317px;
+    }
+
+    /* restant */
+
+    ul#accordeon li {
+      overflow: hidden;
+      height: 90px;
+      list-style-type: none;
+      margin: 3px;
+      padding: 5px;
+      background-color: #EEE;
+      border-radius: 5px;
+    }
+
+    ul#accordeon {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul#accordeon li figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul#accordeon li figure {
+      display: table;
+      width: 317px;
+    }
+
+    ul#accordeon li figure img, ul#accordeon li figure figcaption {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    ul#accordeon li figure figcaption {
+      width: 200px;
+      padding-left: 10px;
+    }
+
+    ul#accordeon li figure h3 {
+      margin: 0px;
+      height: 2em;
+    }
+
+    ul#accordeon li figure p {
+      margin-bottom: 0px;
+    }
+  
+  </style>
   <body>
     <h1>Accordéon horizontal</h1>
     <ul id="accordeon">
@@ -39,3 +106,5 @@
 </ul>
   </body>
 </html>
+
+
